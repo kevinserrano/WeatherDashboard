@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kevin's Weather Page</title>
     <!--Link for css style-->
     <link rel="stylesheet" type="text/css" href="style.css">
     <!--Link for bootstrap-->
@@ -16,27 +16,73 @@
 <body>
 
     <div class="container">
-        <header>
-            <h1>Weather Dashboard</h1>
-        </header>
+        <header></header>
+
+        <form>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Search For a City:</h3>
+                    <input id="search" placeholder="Enter City"></input>
+                    <button class="btn btn-info">Search</button>
+                    <div id="new-info"></div>
+
+
+                </div>
+
+                <div class="col-lg-8">
+                    <h1 id="main">Hello</h1>
+                    <div class="temp">temp</div>
+                    <div class="humid">humid</div>
+                    <div class="wind">wind</div>
+                    <div class="uv-index">uv-index</div>
+
+                </div>
+            </div>
+
+        </form>
     </div>
 
 
 
-
-
-
-
     <script type="text/javascript">
-        var title = $("<h1>", "Weather Dashboard", "<h1>")
-        //page header
+        var title = $("header").text("Weather Dashboard")
+        title.attr("style",
+            "background-color: rgb(47, 47, 48); color: white; text-align: center; height: 70px; font-size: xx-large; padding-top: .5%"
+        )
+
         $("body").prepend(title)
-        //search box
-        //add clikck to search button
+
+        var selectedCity = $("#search").text("")
+
+        $("button").on("click", function () {
+            console.log("working");
+
+
+
+
+
+        });
+        // when opening page I need to display current location weather
+
+        //add button and/click to search button
+        // when opening page i need to display current location weather
         //gather APIs on weather
         //local storage
         //big display of current weather
         //5day forcast of surrent search
+
+        //I search for a city
+        //I am presented with current and future conditions for that city and that city is added to the search history
+        //I view current weather conditions for that city
+        //I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
+        //I view the UV index
+        //I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
+        //I view future weather conditions for that city
+        //I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
+        //I click on a city in the search history
+        //I am again presented with current and future conditions for that city
+        //I open the weather dashboard
+        //I am presented with the last searched city forecast
     </script>
 
 </body>

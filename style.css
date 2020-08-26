@@ -1,9 +1,5 @@
-header {
-    font-size: xx-large;
-    background-color: rgb(47, 47, 48);
-    color: white;
-    text-align: center;
-    height: 70px;
-    padding-top: 1%;
+.col-lg-8 {
+    background-color: teal;
+
 
 }
