@@ -16,38 +16,22 @@ $("body").prepend(title)
 
 $(document).ready(function () {
 
-
+    //Adding event listener to my search button
     $("button").on("click", function () {
         event.preventDefault();
+        //make sure event listener is working
         console.log("working")
-
+        // create a var that holds what is typed into the search area
         var selectedCity = $("#search").val()
         console.log(selectedCity);
 
-
-
-
+        // This function is just adding the cities being searched to the list
+        savedSearches.push(selectedCity);
+        // when entering new city im checking the savedSearches var to see if city has already been searched
+        //if not the push it into the savedSearches var
+        window.localStorage.setItem(selectedCity, JSON.stringify(savedSearches));
+        cityList(selectedCity);
+        weatherInfno(selectedCity);
 
     });
 });
-// when opening page I need to display current location weather
-
-//add button and/click to search button
-// when opening page i need to display current location weather
-//gather APIs on weather
-//local storage
-//big display of current weather
-//5day forcast of surrent search
-
-//I search for a city
-//I am presented with current and future conditions for that city and that city is added to the search history
-//I view current weather conditions for that city
-//I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-//I view the UV index
-//I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-//I view future weather conditions for that city
-//I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
-//I click on a city in the search history
-//I am again presented with current and future conditions for that city
-//I open the weather dashboard
-//I am presented with the last searched city forecast
