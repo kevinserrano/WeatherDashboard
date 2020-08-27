@@ -31,7 +31,46 @@ $(document).ready(function () {
         //if not the push it into the savedSearches var
         window.localStorage.setItem(selectedCity, JSON.stringify(savedSearches));
         cityList(selectedCity);
-        weatherInfno(selectedCity);
+        weatherInfo(selectedCity);
 
     });
 });
+// Calling weatherInfo function
+function weatherInfo(selectedCity) {
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +
+        selectedCity + "&units=imperial&appid=" + apiKey;
+
+
+    // Here we are running the call to OpenWeather
+    $.ajax({
+            url: queryURL,
+            method: "GET"
+        })
+
+        // making a function that stores everything from the API 
+        .then(function (response) {
+            console.log(response)
+            //add div that contains the response
+            var newInfo = $("<div>").attr("class", "card bg-light");
+            $("#main").append(newInfo);
+
+
+            var cardRow = $("<div>").attr("class", "row-info");
+            newInfo.append(cardRow);
+
+
+
+
+
+
+
+
+
+
+
+
+        })
+
+
+
+}
