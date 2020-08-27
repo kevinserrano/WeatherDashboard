@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin's Weather Page</title>
-    <!--Link for css style-->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!--Link for bootstrap-->
+    <!--Bootstrap links-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <!--Source for jquery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--liks to personal style folder-->
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
 
     <div class="container">
+        <!-- I used java to prepend the header-->
         <header></header>
 
         <form>
@@ -23,7 +26,7 @@
                 <div class="col-md-4">
                     <h3>Search For a City:</h3>
                     <input id="search" placeholder="Enter City"></input>
-                    <button class="btn btn-info">Search</button>
+                    <button class="btn btn-info"><span class="fa fa-search"></span></button>
                     <div id="new-info"></div>
 
 
@@ -44,46 +47,16 @@
 
 
 
-    <script type="text/javascript">
-        var title = $("header").text("Weather Dashboard")
-        title.attr("style",
-            "background-color: rgb(47, 47, 48); color: white; text-align: center; height: 70px; font-size: xx-large; padding-top: .5%"
-        )
-
-        $("body").prepend(title)
-
-        var selectedCity = $("#search").text("")
-
-        $("button").on("click", function () {
-            console.log("working");
-
-
-
-
-
-        });
-        // when opening page I need to display current location weather
-
-        //add button and/click to search button
-        // when opening page i need to display current location weather
-        //gather APIs on weather
-        //local storage
-        //big display of current weather
-        //5day forcast of surrent search
-
-        //I search for a city
-        //I am presented with current and future conditions for that city and that city is added to the search history
-        //I view current weather conditions for that city
-        //I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-        //I view the UV index
-        //I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-        //I view future weather conditions for that city
-        //I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
-        //I click on a city in the search history
-        //I am again presented with current and future conditions for that city
-        //I open the weather dashboard
-        //I am presented with the last searched city forecast
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 
