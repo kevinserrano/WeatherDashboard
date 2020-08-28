@@ -23,21 +23,19 @@
 
         <form>
             <div class="row">
-                <div class="col-md-4">
-                    <h3>Search For a City:</h3>
-                    <input id="search" placeholder="Enter City"></input>
-                    <button class="btn btn-info"><span class="fa fa-search"></span></button>
-                    <div id="new-info"></div>
-
+                <div class="col-lg-4">
+                    <div class="searchSection">
+                        <h3>Search For a City:</h3>
+                        <input id="search" class="form-control" placeholder="Enter City">
+                        <button id="button" class="btn btn-info"><span class="fa fa-search"></span></button>
+                    </div>
 
                 </div>
-
+                <!--Drop new searched here-->
+                <div id="new-info"></div>
                 <div class="col-lg-8">
-                    <h1 id="main">Hello</h1>
-                    <div class="temp"></div>
-                    <div class="humid"></div>
-                    <div class="wind"></div>
-                    <div class="uv-index"></div>
+                    <div id="main"></div>
+
 
                 </div>
             </div>
